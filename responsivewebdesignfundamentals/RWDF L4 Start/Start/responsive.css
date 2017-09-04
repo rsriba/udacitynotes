@@ -1,0 +1,92 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+    order: 20;
+}
+
+.header__menu {
+  display: none;
+}
+
+.scores, .weather {
+    width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+
+    .header__logo {
+        margin-right: 0;
+        height: 48px;
+        margin-right: 2px;
+    }
+    .header__title {
+        font-size: 2em;
+        margin-left: 4px;
+        vertical-align: bottom;
+    }
+    .header__menu {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        margin-top: 10px;
+    }
+    .header__menu svg {
+        width: 35px;
+        fill: lightgrey;
+    }
+    .nav {
+      width: 300px;
+      height: 100%;
+      position: absolute;
+      -webkit-transform: translate(-300px, 0);
+      transform: translate(-300px, 0);
+      transition: transform 0.3s ease;
+    }
+
+    nav.open {
+     -webkit-transform: translate(0, 0);
+     transform: translate(0, 0);
+    }
+
+    .nav__item {
+        display: list-item;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 550px) {
+    .hero{
+        width: 60%;
+        order: 1;
+    }
+    .weather{
+        width: 40%;
+        order: 3;
+    }
+}
+@media screen and (min-width: 700px) {
+    .hero{
+        width: 40%;
+        order: 1;
+    }
+    .top-news {
+        width: 60%;
+        order: 1;
+    }
+    .scores {
+        width: 60%;
+        order: 2;
+    }
+    .weather {
+        order: 5;
+    }
+}
+@media screen and (min-width: 850px){
+    body {
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
